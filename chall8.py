@@ -1,20 +1,24 @@
 import numpy as np
 
-N, M, P = list(map(int, input().split()))
-# arr1=[]
-# arr2=[]
-rows = N+P
+arr1 = []
+arr2 = []
+n, m, p = list(map(int, input().split()))
+for _ in range(n):
+    arr1.append(list(map(int, input().split())))
+for _ in range(m):
+    arr2.append(list(map(int, input().split())))
+result = np.concatenate((arr1, arr2), axis=0)
 
-for i in range(rows+1):
-    if i<=N:
-        arr1 = np.array(list(map(int, input().split()))) 
-    else:
-        arr2 = np.array(list(map(int, input().split()))) 
-print(arr1)
-print(arr2)
+print(result)
+# rows = N + P
 
-
-
+# for i in range(rows + 1):
+#     if i <= N:
+#         arr1 = np.array(list(map(int, input().split())))
+#     else:
+#         arr2 = np.array(list(map(int, input().split())))
+# print(arr1)
+# print(arr2)
 
 
 # NxP MxP
