@@ -1,21 +1,19 @@
-import heapq
-
 if __name__ == "__main__":
-    arr = [
-        ("Rachel", -50),
-        ("Mawer", -50),
-        ("Sheen", -50),
-        ("Shaheen", 51),
-    ]
-    # for _ in range(int(input())):
-    #     name = input()
-    #     score = float(input())
-    #     arr.append((name, score))
-    lowest_elements = set(arr)
-    print(lowest_elements)
-    second_score = sorted(lowest_elements)[1][-1]
+    arr = []
+    first = float("inf")
+    second = float(0)
 
-    el = sorted([list(i) for i in arr if i[1] == second_score])
+    for _ in range(int(input())):
+        name = input()
+        score = float(input())
+        arr.append([name, score])
+        if score < first:
+            second = first
+            first = score
+        else:
+            if score > first and score <= second:
+                second = score
 
-    for i in el:
+    lista = [i for i in arr if i[1] == second]
+    for i in sorted(lista):
         print(i[0])
