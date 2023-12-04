@@ -7,23 +7,21 @@ if __name__ == "__main__":
         arr.append(el)
 
     for action in arr:
-        match action[0]:
-            case "insert":
-                op1= int(action[1])
-                op2= int(action[2])
-                out.insert(op1,op2)
-            case  'remove':
-                op1= int(action[1])
-                out.remove(op1)
-            case 'append':
-                op1= int(action[1])
-                out.append(op1)
-            case 'sort':
-                out.sort()
-            case 'pop':
-                out.pop()
-            case 'reverse':
-                out.reverse()
-            case 'print':
-                print(out)
-                
+        if action[0] == 'insert':
+            op1= int(action[1])
+            op2= int(action[2])
+            out.insert(op1,op2)
+        elif action[0] == 'remove':
+            op1= int(action[1])
+            out.remove(op1)
+        elif action[0] == 'append':
+            op1= int(action[1])
+            out.append(op1)
+        elif action[0] == 'sort':
+            out.sort()
+        elif action[0] == 'pop':
+            out.pop()
+        elif action[0] == 'reverse':
+            out.reverse()
+        else:
+            print(out)
