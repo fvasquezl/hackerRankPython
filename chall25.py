@@ -4,3 +4,4 @@ for i in range(N):
  
     print((z).rjust(5,"-"))
     
+    
