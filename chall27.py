@@ -1,6 +1,3 @@
-import textwrap
-
-
 def print_rangoli(size):
     L = list(map(chr, range(97, size + 97)))
     lt = (len(L) * 2 - 1) * 2 - 1
