@@ -1,12 +1,14 @@
 """Module providing a function printing python version."""
 
-def is_leap(year:int):
+
+def is_leap(year: int):
     """Function printing python version."""
     leap = False
-    if year/4 == year//4 and year/100 != year//100 or year/400 == year//400:
-        leap=True
+    if year / 4 == year // 4 and year / 100 != year // 100 or year / 400 == year // 400:
+        leap = True
     print(leap)
     return leap
+
 
 # year = int(input())
 # print(is_leap(year))

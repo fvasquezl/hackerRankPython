@@ -1,4 +1,4 @@
-def odd(m:int):
+def odd(m: int):
     if m % 2 != 0:
         return True
     return False

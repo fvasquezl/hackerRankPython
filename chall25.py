@@ -1,7 +1,7 @@
-N,M = map(int, input().split())
-z=".|."
+N, M = map(int, input().split())
+z = ".|."
 j = 1
-i=1
+i = 1
 while i < N + 1:
     if i == (N + 1) / 2:
         print(("WELCOME").center(M, "-"))
