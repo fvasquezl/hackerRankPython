@@ -4,7 +4,7 @@ from timeit import default_timer as timer
 def minion_game(string):
     # your code goes here
     vowels = "A", "E", "I", "O", "U"
-    mlist = list(string)
+    # mlist = list(string)
     s = 0
     k = 0
     # start = timer()
@@ -34,9 +34,9 @@ def minion_game(string):
     #         s += len(mlist[i:])
     # end = timer()
     # print(end - start)
-    ls = len(mlist)
+    ls = len(string)
     start = timer()
-    for i, c in enumerate(mlist):
+    for i, c in enumerate(string):
         if c in vowels:
             k += ls - i
         else:
