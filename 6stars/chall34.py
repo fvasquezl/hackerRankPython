@@ -2,18 +2,16 @@
 from collections import Counter
 
 if __name__ == "__main__":
+    lc = {}
+    profit = 0
     s = int(input())
     ls = list(map(int, input().split()))
     l1 = Counter(ls)
-    # for key, value in ls.items():
-    #     print(key, value)
-
     c = int(input())
-    lc = {}
-
     for c_itr in range(c):
         k, v = list(map(int, input().split()))
         if l1[k] != 0:
-            print(l1[k])
+            l1[k] -= 1
+            profit += v
 
-    # print(shows(ls, lc))
+    print(profit)
