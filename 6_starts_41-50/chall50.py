@@ -1,6 +1,6 @@
 import re
 
-fun = lambda x: re.fullmatch(r"\b[A-Za-z0-9_-]+@[A-Za-z0-9]+\.[A-Za-z]{3}\b", x)
+fun = lambda x: re.fullmatch(r"\b[A-Za-z0-9_-]+@[A-Za-z0-9]+\.[A-Za-z]{1,3}\b", x)
 
 # def fun(s):
 #     # return True if s is a valid email, else return False
