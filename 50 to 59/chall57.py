@@ -1,18 +1,17 @@
-square = lambda x: max(x) ** 2
+from itertools import product
+
+square = lambda x: x**2
+module = lambda x: sum(x) % M
 
 if __name__ == "__main__":
     K, M = list(map(int, input().split()))
     arr = []
-    r = 0
-
     for _ in range(K):
-        arr.append(list(map(int, input().split())))
+        arr.append(set(list(square(x) for x in map(int, input().split()))[1:]))
 
-    for a in arr:
-        r += square(a)
+    print(max([module(x) for x in product(*arr)]))
 
-    print(r % M)
-
+# 7 867
 # 7 6429964 4173738 9941618 2744666 5392018 5813128 9452095
 # 7 6517823 4135421 6418713 9924958 9370532 7940650 2027017
 # 7 1506500 3460933 1550284 3679489 4538773 5216621 5645660
