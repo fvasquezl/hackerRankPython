@@ -2,9 +2,11 @@ import re
 
 if __name__ == "__main__":
     n = int(input())
+
     for _ in range(n):
+        a = input()
         try:
-            pattern = bool(re.compile("r'(" + input() + ")'"))
-            print(pattern)
+            re.compile(a)
+            print(True)
         except re.error:
-            print("False")
+            print(False)
