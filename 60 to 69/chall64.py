@@ -8,8 +8,7 @@ if __name__ == "__main__":
         item_name = ' '.join(a[0:-1])
         net_price = int(a[-1])
         if L1.__contains__(item_name):
-            price = L1[item_name]
-            net_price+=price
+            net_price+=L1[item_name]
         L1[item_name] =  net_price
        
     for key,value in L1.items():
