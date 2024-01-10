@@ -1,11 +1,12 @@
+#!/bin/python3
+
+from collections import Counter
+
+
 if __name__ == "__main__":
-    N = int(input())
+    s = input()
 
-    for _ in range(N):
-        a = int(input())
-        b = list(map(str, input().split()))
-    
+    l1 = Counter(sorted(s)).most_common(3)
 
-    print(*L1)
-
-    
+    for i in l1:
+        print(*i)
