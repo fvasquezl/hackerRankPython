@@ -14,11 +14,3 @@ for i in range(
     print(sum(list(map(lambda x: x[1]*(10**x[0]) , enumerate([*range(1, i)]+[*range(i, 0,-1)])))))
 
 
-
-
-
-# for i in range(1, int(input()) + 1):
-#     print(map(int, [x for x in range(0, i)]))
-    # print(sum(list(map(lambda num: i * 10 ** (i - num), range(1, i + 1)))))
-
-    # print(sum(list(map(lambda num: i * 10 ** (i - num), range(1, i + 1)))))
