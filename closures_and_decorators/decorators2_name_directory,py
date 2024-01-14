@@ -4,11 +4,7 @@ import operator
 def person_lister(f):
     def inner(people):
         # complete the function
-
-        return [f(x) for x in sorted(people, key=lambda p: p[2])]
-        # print(f"{l1[1]} {l1[2]}")
-
-        # return l1
+        return [f(x) for x in sorted(people, key=lambda p: int(p[2]))]
 
     return inner
 
