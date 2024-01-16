@@ -1,26 +1,20 @@
 import re
 
 if __name__ == "__main__":
-    txt = "\n".join([input() for i in range(int(input()))])
-    txt = re.sub("\s&{2}\s", " and ", txt)
-    txt = re.sub("\s[|]{2}\s", " or ", txt)
+    TXT = "\n".join([input() for i in range(int(input()))])
+    txt = re.sub(r"(?<=\s)&&(?=\s)", "and", TXT)
+    txt = re.sub(r"(?<=\s)[|]{2}(?=\s)", "or", txt)
+    print(txt)
 
-    print(repr(txt))
+"""
+(?<=\s): Esto es una "búsqueda de retroceso positivo" (positive lookbehind). 
+Significa que la coincidencia debe estar precedida por un espacio en blanco (\s). 
+Sin embargo, el espacio en blanco no se incluirá en la coincidencia. 
+Es una restricción en la parte izquierda de la cadena que quieres encontrar.
 
-
-        1
-
-    x&& &&& && && x || | ||\|| x
-
-x&& &&& and and x or | ||\|| x
-
-
-x&& &&& and and x or | ||\|| x
-
-c $&1|| or and and &|&&| & | | &&c
-
-    1
-
-    x&& &&& && && x || | ||\|| x
-
-x&& &&& and and x or | ||\|| x
+(?=\s): Esto es una "búsqueda positiva hacia adelante" (positive lookahead). 
+Significa que la coincidencia debe estar seguida por un espacio en blanco (\s). 
+Al igual que en el caso de la búsqueda positiva hacia atrás, el espacio en blanco 
+no se incluirá en la coincidencia. Es una restricción en la parte derecha de la cadena 
+que quieres encontrar.
+"""
