@@ -1,16 +1,15 @@
 import re
 
 if __name__ == "__main__":
-    s = "..12345678910111213141516171820212223"
-    m = "".join(re.findall(r"\w+", s))
-    r = "-1"
-    x = re.match(r"(1+)", m)
-    for i in x:
-        print(i.group())
+    S = "__commit__"
+    m = re.match(r".*?([A-Za-z0-9])\1.*", S)
 
-    # for i in m:
-    #     if len(re.findall(f"{i}+", m)) > 1:
-    #         r = "1"
-    #         break
+    if m:
+        print(m.group(1))
+    else:
+        print("-1")
 
-    # print(r)
+    # if m.group(1):
+    #     print(m.group(1))
+    # else:
+    #     print(-1)
