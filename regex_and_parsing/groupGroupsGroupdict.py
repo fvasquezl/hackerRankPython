@@ -1,19 +1,7 @@
 import re
 
-<<<<<<< HEAD
-cadena = "..12345678910111213141516171820212223"
-
-# Definir la expresión regular para encontrar grupos de dígitos iguales
-expresion_regular = re.compile(r"(\d)\1*")
-
-# Usar findall para obtener todos los grupos
-grupos = expresion_regular.findall(cadena)
-
-print(grupos)
-=======
 if __name__ == "__main__":
-    S = "__commit__"
-
+    S = input()
     m = re.match(r".*?([A-Za-z0-9])\1.*", S)
 
     if m:
@@ -36,4 +24,3 @@ Esta expresión regular tiene una estructura similar a la anterior, pero con alg
 
     4.- '.*': Finalmente, cualquier número (incluyendo cero) de caracteres al final.
 """
->>>>>>> d98ce89bdc4c928db459b6f1c69d7fefb38243da
