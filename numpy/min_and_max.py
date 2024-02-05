@@ -7,6 +7,4 @@ if __name__ == "__main__":
         a.append(list(map(int, (input().split()))))
     A = numpy.array(a)
 
-    print(numpy.mean(A, axis=1))
-    print(numpy.var(A, axis=0))
-    print(numpy.around(numpy.std(A, axis=None), decimals=11))
+    print(numpy.mean(numpy.min(A, axis=1)))
